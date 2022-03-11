@@ -6,11 +6,15 @@ import { MovieCard } from '../../components/MovieCard/MovieCard'
 import { useSelector } from 'react-redux'
 import { prevPage, nextPage } from '../../utils/utils'
 import './MovieList.css'
+import { searchMovies } from '../../api/searchMovies'
 
-const MovieList = () => {
+const MovieList = ({ page, setPage, inputValue, setInputValue }) => {
     const [movieList, setMovieList] = useState([]);
-    const [page, setPage] = useState(1);
     const view = useSelector(state => state.view)
+    const changeInput = (event) => {
+        setInputValue(event.target.value)
+        console.log(inputValue);
+    }
 
     useEffect(async () => {
         if (view === 'soon-movies' || view === 'movies') {
@@ -18,18 +22,28 @@ const MovieList = () => {
                 .then(data => {
                     setMovieList(data.results);
                 })
+        } else if (view === 'search-movies' && inputValue !== '') {
+            await searchMovies(page, inputValue)
+                .then(data => {
+                    setMovieList(data.results);
+                })
+            console.log(movieList);
         } else {
             await getMovies(page)
                 .then(data => {
                     setMovieList(data.results);
                 })
         }
-    }, [view, page])
+    }, [view, page, inputValue])
     return (
         <div className="MovieList-container">
             {view === 'search-movies' ?
                 <div className='MovieList-input-container'>
-                    <input id='search-input' type="text" placeholder='Busca tu película favorita' />
+                    <input
+                        id='search-input'
+                        type="text"
+                        placeholder='Busca tu película favorita'
+                        onChange={(e) => changeInput(e)} />
                 </div>
                 :
                 null
@@ -54,7 +68,7 @@ const MovieList = () => {
                                 image={movie.poster_path}
                                 popularity={movie.popularity}
                                 language={movie.original_language}
-                                status={movie.status} />
+                                date={movie.release_date} />
                         )
                     })
                 }

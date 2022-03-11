@@ -3,10 +3,12 @@ import { useDispatch } from 'react-redux'
 import { setViewAction } from '../../redux/actions/actionCreators'
 import './FilterButtons.css'
 
-const FilterButtons = () => {
+const FilterButtons = ({ setPage, setInputValue }) => {
     const dispatch = useDispatch();
     const soonView = () => {
-        dispatch(setViewAction('soon-movies'))
+        dispatch(setViewAction('soon-movies'));
+        setPage(1);
+        setInputValue('');
     }
     const searchView = () => {
         dispatch(setViewAction('search-movies'))
