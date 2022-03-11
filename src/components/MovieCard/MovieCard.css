@@ -1,0 +1,33 @@
+.MovieCard-container {
+    display: flex;
+    margin-bottom: 1rem;
+    margin-right: 1rem;
+    background-color: var(--pewter);
+    width: 34.5rem;
+    transition: all 0.3s;
+}
+.MovieCard-container:hover {
+    transform: scale(1.1);
+    z-index: 2;
+    background-color: var(--light-pewter);
+}
+.MovieCard-container .MovieCard-image {
+    width: 15rem;
+    height: 25rem;
+}
+.MovieCard-container .MovieCard-image img {
+    width: 15rem;
+    height: 25rem;
+    object-fit: cover;
+}
+.MovieCard-container .MovieCard-info {
+    padding: 0 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    font-size: 1.5rem;
+}
+.MovieCard-container .MovieCard-info span {
+    font-weight: bold;
+    font-size: 1.7rem;
+}

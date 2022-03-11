@@ -1,0 +1,21 @@
+.FilterButtons-container{
+    background-color: var(--pewter);
+    display: flex;
+    justify-content: flex-start;
+    position: sticky;
+    top: 59px;
+    z-index: 10;
+}
+.FilterButtons-container .FilterButtons-button {
+    padding: 1rem 2rem;
+    background-color: var(--pewter);
+    border: 0.1rem solid var(--pewter);
+    color: var(--white);
+    font-size: 1.7rem;
+    cursor: pointer;
+}
+.FilterButtons-container .FilterButtons-button:hover {
+    background-color: var(--white);
+    border: 0.1rem solid var(--white);
+    color: var(--pewter);
+}

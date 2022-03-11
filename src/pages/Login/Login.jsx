@@ -1,8 +1,9 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { Form } from '../../components/Form/Form'
 import moviePoster from '../../assets/images/image-gray.jpeg'
 import './Login.css'
 import { useSelector } from 'react-redux'
+import { getMovies } from '../../api/getMovies'
 
 const Login = () => {
     const view = useSelector(state => state.view)

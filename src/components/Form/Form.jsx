@@ -1,9 +1,16 @@
 import React from 'react'
-import movieIcon from '../../assets/logos/clapperboard.png'
+import { useDispatch } from 'react-redux'
+import { setViewAction } from '../../redux/actions/actionCreators'
+import { Link } from 'react-router-dom'
 import { ServiceButtons } from '../ServiceButtons/ServiceButtons'
+import movieIcon from '../../assets/logos/clapperboard.png'
 import './Form.css'
 
 const Form = ({ view }) => {
+    const dispatch = useDispatch();
+    const login = () => {
+        dispatch(setViewAction('movies'));
+    }
     return (
         <form className='Form-container'>
             {view === 'register' ?
@@ -21,6 +28,9 @@ const Form = ({ view }) => {
                 <input id='email' type="email" placeholder='Correo Electrónico' />
                 <input id='password' type="password" placeholder='Contraseña' />
             </div>
+            <Link to={'/movies'}><button onClick={login} className='Form-button'>{view === 'register' ?
+                'Registrar'
+                : 'Ingresar'}</button></Link>
             <figure className="Movie-logo">
                 <img src={movieIcon} alt="Logo" />
             </figure>

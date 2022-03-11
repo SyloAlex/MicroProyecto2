@@ -18,6 +18,7 @@
 }
 .Form-container .Form-inputs {
     margin: 2rem 0;
+    margin-bottom: 1rem;
 }
 .Form-container .Form-inputs input {
     width: 80%;
@@ -30,6 +31,23 @@
     color: var(--white);
     margin-bottom: 1.5rem;
 }
+.Form-container .Form-button {
+    padding: 1rem 2rem;
+    width: 65%;
+    align-self: center;
+    margin-bottom: 2rem;
+    border-radius: 1rem;
+    font-size: 1.8rem;
+    color: var(--white);
+    background-color: var(--pewter);
+    border: 0.1rem solid var(--dark-black);
+    cursor: pointer;
+}
+.Form-container .Form-button:hover {
+    background-color: var(--white);
+    border: 0.1rem solid var(--white);
+    color: var(--black);
+}
 .Form-container .Movie-logo {
     width: 50%;
     margin: 0 auto;
@@ -37,4 +55,8 @@
 .Form-container .Movie-logo img {
     width: 50%;
     margin: 0 auto;
+    transition: all 1s;
+}
+.Form-container .Movie-logo img:hover {
+    transform: rotate(360deg);
 }

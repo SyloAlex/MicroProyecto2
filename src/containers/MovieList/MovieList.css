@@ -1,0 +1,50 @@
+.MovieList-container .MovieList-input-container {
+    background-color: var(--pewter);
+    text-align: center;
+    position: sticky;
+    top: 100.5px;
+    z-index: 10;
+}
+.MovieList-container .MovieList-input-container input {
+    height: 3rem;
+    margin: 0.5rem 0;
+    max-width: 50rem;
+    width: 70%;
+    font-size: 2rem;
+    padding-left: 1rem;
+    border-radius: 1rem;
+    background-color: var(--light-pewter);
+    border: 0.1rem solid var(--white);
+    color: var(--white);
+}
+.MovieList-container .MovieList-input-container input::placeholder {
+    color: var(--white);
+}
+.MovieList-container .MovieList-input-container input:focus-visible {
+    outline: none;
+}
+.MovieList-container .MovieList-display {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 1rem;
+    justify-content: center;
+}
+.MovieList-container .MovieList-page {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 2rem;
+}
+.MovieList-container .MovieList-page button {
+    padding: 1rem 3rem;
+    margin-right: 2rem;
+    font-size: 1.8rem;
+    border-radius: 1rem;
+    background-color: var(--light-pewter);
+    border: 0.1rem solid var(--light-pewter);
+    color: var(--white);
+    cursor: pointer;
+}
+.MovieList-container .MovieList-page button:hover {
+    background-color: var(--white);
+    color: var(--black);
+}
