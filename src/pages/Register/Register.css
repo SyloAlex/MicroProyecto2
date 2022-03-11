@@ -1,0 +1,26 @@
+.Register-container {
+    display: flex;
+    justify-content: space-between;
+    min-width: 33rem;
+}
+.Register-container .Register-image {
+    height: calc(100vh - 99px);
+    width: calc(100vw - 333px);
+    margin: 2rem;
+}
+.Register-container .Register-image img {
+    height: inherit;
+    width: inherit;
+    object-fit: cover;
+}
+
+@media (max-width: 825px) {
+    .Register-container .Register-image {
+        display: none;
+    }
+    .Register-container {
+        margin: 0 auto;
+        display: block;
+        width: 33rem;
+    }
+}

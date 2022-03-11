@@ -1,0 +1,12 @@
+.Navbar-container .Navbar-list {
+    list-style: none;
+    display: flex;
+}
+.Navbar-container .Navbar-list .Navbar-element {
+    padding: 2rem 4rem;
+    cursor: pointer;
+}
+.Navbar-container .Navbar-list .Navbar-element:hover {
+    background-color: var(--white);
+    color: var(--black);
+}

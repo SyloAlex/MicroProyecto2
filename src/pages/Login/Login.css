@@ -1,0 +1,26 @@
+.Login-container {
+    display: flex;
+    justify-content: space-between;
+    min-width: 33rem;
+}
+.Login-container .Login-image {
+    height: calc(100vh - 99px);
+    width: calc(100vw - 333px);
+    margin: 2rem;
+}
+.Login-container .Login-image img {
+    height: inherit;
+    width: inherit;
+    object-fit: cover;
+}
+
+@media (max-width: 825px) {
+    .Login-container .Login-image {
+        display: none;
+    }
+    .Login-container {
+        margin: 0 auto;
+        display: block;
+        width: 33rem;
+    }
+}

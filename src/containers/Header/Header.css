@@ -1,0 +1,6 @@
+.Header-container {
+    width: 100%;
+    background-color: var(--gray);
+    display: flex;
+    justify-content: end;
+}

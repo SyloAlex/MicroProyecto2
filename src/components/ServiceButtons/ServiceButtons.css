@@ -1,0 +1,15 @@
+.ServiceButtons-containers {
+    display: flex;
+    justify-content: space-evenly;
+    margin: 1rem 0;
+}
+.ServiceButtons-containers .ServiceButtons-element {
+    width: 8rem;
+    cursor: pointer;
+}
+.ServiceButtons-containers .ServiceButtons-element img {
+    width: 7rem;
+}
+.ServiceButtons-containers .googleIcon img {
+    width: 5.8rem;
+}
