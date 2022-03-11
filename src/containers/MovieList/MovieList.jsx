@@ -3,11 +3,13 @@ import { useEffect } from 'react'
 import { getSoonMovies } from '../../api/getSoonMovies'
 import { getMovies } from '../../api/getMovies'
 import { MovieCard } from '../../components/MovieCard/MovieCard'
-import './MovieList.css'
 import { useSelector } from 'react-redux'
+import { prevPage, nextPage } from '../../utils/utils'
+import './MovieList.css'
 
 const MovieList = () => {
     const [movieList, setMovieList] = useState([]);
+    const [page, setPage] = useState(1);
     const view = useSelector(state => state.view)
 
     useEffect(async () => {
@@ -15,16 +17,14 @@ const MovieList = () => {
             await getSoonMovies()
                 .then(data => {
                     setMovieList(data.results);
-                    console.log(data);
                 })
         } else {
-            await getMovies()
+            await getMovies(page)
                 .then(data => {
                     setMovieList(data.results);
-                    console.log(data);
                 })
         }
-    }, [view])
+    }, [view, page])
     return (
         <div className="MovieList-container">
             {view === 'search-movies' ?
@@ -61,8 +61,16 @@ const MovieList = () => {
             </div>
             {view === 'search-movies' ?
                 <div className='MovieList-page'>
-                    <button type='button' className='MovieList-previous'>Anterior</button>
-                    <button type='button' className='MovieList-next'>Siguiente</button>
+                    {page === 1 ?
+                        <button type='button' id='MovieList-prev' disabled>Anterior</button>
+                        :
+                        <button onClick={() => prevPage(page, setPage)} type='button' id='MovieList-prev'>Anterior</button>
+                    }
+                    {page < 1000 ?
+                        <button onClick={() => nextPage(page, setPage)} type='button' id='MovieList-next'>Siguiente</button>
+                        :
+                        <button type='button' id='MovieList-next' disabled>Anterior</button>
+                    }
                 </div>
                 :
                 null
