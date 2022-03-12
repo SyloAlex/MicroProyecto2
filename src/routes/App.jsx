@@ -22,14 +22,16 @@ const App = () => {
               element={
                 <ProtectedRoute>
                   <Movies />
-                </ProtectedRoute>}
+                </ProtectedRoute>
+              }
             />
             <Route
               path={'/movies/:movieID'}
               element={
                 <ProtectedRoute>
                   <MovieDetails movie />
-                </ProtectedRoute>}
+                </ProtectedRoute>
+              }
             />
           </Routes>
         </Layout>

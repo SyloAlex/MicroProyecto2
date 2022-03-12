@@ -10,8 +10,8 @@ const Header = () => {
   const view = useSelector((state) => state.view);
   const dispatch = useDispatch();
   const moviewView = () => {
-    dispatch(setViewAction('movies'))
-  }
+    dispatch(setViewAction('movies'));
+  };
   return (
     <div className="Header-container">
       {view === 'detail-movies' ? (
