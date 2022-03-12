@@ -3,6 +3,7 @@ const initialState = {
     email: null,
   },
   view: 'login',
+  error: '',
 };
 
 export { initialState };

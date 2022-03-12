@@ -4,8 +4,7 @@
     min-width: 33rem;
 }
 .Register-container .Register-image {
-    height: calc(100vh - 99px);
-    width: calc(100vw - 333px);
+    width: calc(100vw - 35rem);
     margin: 2rem;
 }
 .Register-container .Register-image img {

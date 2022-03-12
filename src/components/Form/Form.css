@@ -3,7 +3,7 @@
     flex-direction: column;
     justify-content: flex-start;
     width: 33rem;
-    height: fit-content;
+    height: inherit;
     margin: 2rem;
     margin-left: 0;
     padding: 3rem 0;

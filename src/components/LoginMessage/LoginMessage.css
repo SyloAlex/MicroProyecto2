@@ -1,0 +1,34 @@
+.LoginMessage-container {
+    border: 0.2rem solid var(--white);
+    padding: 3rem;
+    border-radius: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.LoginMessage-container .LoginMessage-icon {
+    width: 8rem;
+    margin-bottom: 0.5rem;
+}
+.LoginMessage-container .LoginMessage-icon img {
+    width: 8rem;
+}
+.LoginMessage-container p {
+    margin-bottom: 0.5rem;
+}
+.LoginMessage-container span {
+    font-weight: bold;
+}
+.LoginMessage-container button {
+    padding: 0.5rem 1.5rem;
+    margin-top: 1rem;
+    border-radius: 0.5rem;
+    border: 0.1rem solid var(--white);
+    background-color: var(--white);
+    cursor: pointer;
+}
+.LoginMessage-container button:hover {
+    background-color: var(--pewter);
+    color: var(--white);
+}
