@@ -2,8 +2,18 @@
     width: 100%;
     background-color: var(--gray);
     display: flex;
-    justify-content: end;
+    justify-content: space-between;
+    align-items: center;
     position: sticky;
     top: 0;
     z-index: 10;
+}
+.Header-container a {
+    margin-left: 4rem;
+}
+.Header-container .Header-go-back {
+    height: 3rem;
+}
+.Header-container .Header-go-back img {
+    height: 100%;
 }

@@ -17,9 +17,10 @@
     padding: 2rem;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: center;
     border-radius: 1rem;
-    font-size: 1.8rem;
+    font-size: 2rem;
+    height: fit-content;
 }
 .MovieDetails-container .MovieDetails-info .MovieDetails-info-details {
     padding: 0.8rem;
@@ -35,29 +36,22 @@
     justify-content: space-between;
 }
 .MovieDetails-container .MovieDetails-info .MovieDetails-flex-container .MovieDetails-info-noarray {
-    width: 45%;
+    width: 48%;
 }
 .MovieDetails-container .MovieDetails-info .MovieDetails-flex-container .MovieDetails-info-array {
-    width: 45%;
+    width: 48%;
 }
 .MovieDetails-container .MovieDetails-info .MovieDetails-flex-container .MovieDetails-info-array div {
     padding: 0.8rem;
     background-color: var(--black);
     border-radius: 1rem;
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+}
+.MovieDetails-container .MovieDetails-info .MovieDetails-flex-container .MovieDetails-info-noarray div {
+    margin-top: 1rem;
 }
 
-@media (max-width: 1000px) {
-    .MovieDetails-container .MovieDetails-info .MovieDetails-flex-container .MovieDetails-info-noarray div {
-        font-size: 1.6rem;
-        margin-top: 2rem;
-    }
-    .MovieDetails-container .MovieDetails-info .MovieDetails-flex-container .MovieDetails-info-array div {
-        margin-top: 2rem;
-    }
-    .MovieDetails-container .MovieDetails-info .MovieDetails-info-details:nth-child(2) {
-        margin-top: 2rem;
-    }
-}
 @media (max-width: 800px) {
     .MovieDetails-container {
         flex-direction: column;

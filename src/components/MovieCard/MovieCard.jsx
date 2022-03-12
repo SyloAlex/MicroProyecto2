@@ -1,12 +1,19 @@
 import React from 'react'
+import { useDispatch } from 'react-redux'
 import { Link } from 'react-router-dom'
 import noImage from '../../assets/images/image-not-available.png'
 import './MovieCard.css'
+import { setViewAction } from '../../redux/actions/actionCreators'
 
 const MovieCard = ({ movie }) => {
+    const dispatch = useDispatch()
+    const detailsView = () => {
+        dispatch(setViewAction('detail-movies'));
+    }
+
     return (
         <Link to={`/movies/${movie.id}`}>
-            <div className="MovieCard-container">
+            <div onClick={detailsView} className="MovieCard-container">
                 <figure className="MovieCard-image">
                     <img
                         src={`http://image.tmdb.org/t/p/w500${movie.poster_path}`}

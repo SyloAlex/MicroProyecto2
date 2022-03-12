@@ -1,9 +1,8 @@
 const initialState = {
-    user: {
-        email: null,
-        password: null,
-    },
-    view: 'login',
-}
+  user: {
+    email: null,
+  },
+  view: 'login',
+};
 
-export { initialState }
+export { initialState };
