@@ -6,6 +6,7 @@ import { Register } from '../pages/Register/Register'
 import { Movies } from '../pages/Movies/Movies'
 import { Layout } from '../containers/Layout/Layout'
 import { Provider } from 'react-redux'
+import { MovieDetails } from '../pages/MovieDetails/MovieDetails'
 
 const App = () => {
     return (
@@ -16,6 +17,7 @@ const App = () => {
                         <Route path={'/'} element={<Login />} />
                         <Route path={'/register'} element={<Register />} />
                         <Route path={'/movies'} element={<Movies />} />
+                        <Route path={'/movies/:movieID'} element={<MovieDetails movie />} />
                     </Routes>
                 </Layout>
             </Provider>

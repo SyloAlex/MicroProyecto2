@@ -26,12 +26,13 @@ const MovieList = ({ page, setPage, inputValue, setInputValue }) => {
             await searchMovies(page, inputValue)
                 .then(data => {
                     setMovieList(data.results);
+                    window.scroll(0, 0);
                 })
-            console.log(movieList);
         } else {
             await getMovies(page)
                 .then(data => {
                     setMovieList(data.results);
+                    window.scroll(0, 0);
                 })
         }
     }, [view, page, inputValue])
@@ -53,22 +54,14 @@ const MovieList = ({ page, setPage, inputValue, setInputValue }) => {
                     movieList.slice(0, 12).map((movie) => {
                         return (
                             <MovieCard key={movie.id}
-                                title={movie.original_title}
-                                image={movie.poster_path}
-                                popularity={movie.popularity}
-                                language={movie.original_language}
-                                status={movie.status} />
+                                movie={movie} />
                         )
                     })
                     :
                     movieList.map((movie) => {
                         return (
                             <MovieCard key={movie.id}
-                                title={movie.original_title}
-                                image={movie.poster_path}
-                                popularity={movie.popularity}
-                                language={movie.original_language}
-                                date={movie.release_date} />
+                                movie={movie} />
                         )
                     })
                 }

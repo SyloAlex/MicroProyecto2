@@ -1,0 +1,73 @@
+.MovieDetails-container {
+    display: flex;
+    max-width: 105rem;
+    margin: 0 auto;
+}
+.MovieDetails-container .MovieDetails-image-container {
+    height: calc(100vh - 99px);
+    margin: 2rem;
+}
+.MovieDetails-container .MovieDetails-image-container img {
+    height: calc(100vh - 99px);
+    border-radius: 1rem;
+}
+.MovieDetails-container .MovieDetails-info {
+    margin: 2rem;
+    background-color: var(--pewter);
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border-radius: 1rem;
+    font-size: 1.8rem;
+}
+.MovieDetails-container .MovieDetails-info .MovieDetails-info-details {
+    padding: 0.8rem;
+    background-color: var(--black);
+    border-radius: 1rem;
+    font-size: 2rem;
+}
+.MovieDetails-container .MovieDetails-info span {
+    font-weight: bold;
+}
+.MovieDetails-container .MovieDetails-info .MovieDetails-flex-container {
+    display: flex;
+    justify-content: space-between;
+}
+.MovieDetails-container .MovieDetails-info .MovieDetails-flex-container .MovieDetails-info-noarray {
+    width: 45%;
+}
+.MovieDetails-container .MovieDetails-info .MovieDetails-flex-container .MovieDetails-info-array {
+    width: 45%;
+}
+.MovieDetails-container .MovieDetails-info .MovieDetails-flex-container .MovieDetails-info-array div {
+    padding: 0.8rem;
+    background-color: var(--black);
+    border-radius: 1rem;
+}
+
+@media (max-width: 1000px) {
+    .MovieDetails-container .MovieDetails-info .MovieDetails-flex-container .MovieDetails-info-noarray div {
+        font-size: 1.6rem;
+        margin-top: 2rem;
+    }
+    .MovieDetails-container .MovieDetails-info .MovieDetails-flex-container .MovieDetails-info-array div {
+        margin-top: 2rem;
+    }
+    .MovieDetails-container .MovieDetails-info .MovieDetails-info-details:nth-child(2) {
+        margin-top: 2rem;
+    }
+}
+@media (max-width: 800px) {
+    .MovieDetails-container {
+        flex-direction: column;
+    }
+    .MovieDetails-container .MovieDetails-image-container {
+        height: auto;
+        width: 33.5rem;
+    }
+    .MovieDetails-container .MovieDetails-image-container img {
+        height: auto;
+        width: 33.5rem;
+    }
+}

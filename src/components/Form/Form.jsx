@@ -1,6 +1,6 @@
 import React from 'react'
 import { useDispatch } from 'react-redux'
-import { setViewAction } from '../../redux/actions/actionCreators'
+import { setUserAction, setViewAction } from '../../redux/actions/actionCreators'
 import { Link } from 'react-router-dom'
 import { ServiceButtons } from '../ServiceButtons/ServiceButtons'
 import movieIcon from '../../assets/logos/clapperboard.png'
@@ -10,6 +10,7 @@ const Form = ({ view }) => {
     const dispatch = useDispatch();
     const login = () => {
         dispatch(setViewAction('movies'));
+        dispatch(setUserAction({ email: 'alex@gmail.com', password: 'silksongisamyth' }))
     }
     return (
         <form className='Form-container'>
@@ -18,13 +19,6 @@ const Form = ({ view }) => {
                 : <p>Ingresa</p>}
             <ServiceButtons />
             <div className="Form-inputs">
-                {view === 'register' ?
-                    <React.Fragment>
-                        <input id='name' type="text" placeholder='Nombre' />
-                        <input id='lastName' type="text" placeholder='Apellido' />
-                    </React.Fragment>
-                    :
-                    null}
                 <input id='email' type="email" placeholder='Correo Electrónico' />
                 <input id='password' type="password" placeholder='Contraseña' />
             </div>
