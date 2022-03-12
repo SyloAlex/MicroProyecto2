@@ -4,7 +4,7 @@ import { auth } from '../../firebase/firebaseConfig';
 import {
   setUserAction,
   setViewAction,
-  setErrorAction
+  setErrorAction,
 } from '../../redux/actions/actionCreators';
 import { ServiceButtons } from '../ServiceButtons/ServiceButtons';
 import { useForm } from 'react-hook-form';
@@ -26,7 +26,7 @@ const Form = () => {
         dispatch(setViewAction('movies'));
         navigate('/movies');
       } catch (e) {
-        dispatch(setErrorAction(e.code))
+        dispatch(setErrorAction(e.code));
       }
     } else {
       try {
@@ -35,7 +35,7 @@ const Form = () => {
         dispatch(setViewAction('movies'));
         navigate('/movies');
       } catch (e) {
-        dispatch(setErrorAction(e.code))
+        dispatch(setErrorAction(e.code));
       }
     }
   };

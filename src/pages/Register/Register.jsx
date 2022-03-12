@@ -3,11 +3,11 @@ import { useSelector } from 'react-redux';
 import { Form } from '../../components/Form/Form';
 import moviePoster from '../../assets/images/sharknado.jpeg';
 import { Modal } from '../../containers/Modal/Modal';
-import LoginMessage from '../../components/LoginMessage/LoginMessage'
+import LoginMessage from '../../components/LoginMessage/LoginMessage';
 import './Register.css';
 
 const Register = () => {
-  const errorValue = useSelector(state => state.error)
+  const errorValue = useSelector((state) => state.error);
   const view = useSelector((state) => state.view);
 
   return (

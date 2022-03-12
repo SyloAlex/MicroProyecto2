@@ -18,7 +18,7 @@ const Navbar = () => {
                 onClick={() => updateView({ prop: dispatch, view: 'login' })}
                 className="Navbar-element"
               >
-                Login
+                Ingresa
               </li>
             </Link>
             <Link to={'/register'}>
@@ -26,7 +26,7 @@ const Navbar = () => {
                 onClick={() => updateView({ prop: dispatch, view: 'register' })}
                 className="Navbar-element"
               >
-                Register
+                Regístrate
               </li>
             </Link>
           </React.Fragment>
@@ -37,7 +37,7 @@ const Navbar = () => {
                 onClick={() => updateView({ prop: dispatch, view: 'movies' })}
                 className="Navbar-element"
               >
-                Buscar
+                Películas
               </li>
             </Link>
             <Link to={'/'}>

@@ -5,6 +5,23 @@
       "firebase.json",
       "**/.*",
       "**/node_modules/**"
+    ],
+    "redirects": [
+      {
+        "source": "/movies",
+        "destination": "/",
+        "type": 301
+      },
+      {
+        "source": "/register",
+        "destination": "/",
+        "type": 301
+      },
+      {
+        "source": "/movies/*",
+        "destination": "/",
+        "type": 301
+      }
     ]
   }
 }
