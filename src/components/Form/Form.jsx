@@ -44,6 +44,10 @@ const Form = () => {
     <form className="Form-container" onSubmit={handleSubmit(onSubmit)}>
       {view === 'register' ? <p>Registrate</p> : <p>Ingresa</p>}
       <ServiceButtons />
+      <p id="Form-p">
+        ...o {view === 'register' ? 'registrate' : 'ingresa'} con tu correo
+        electronico
+      </p>
       <div className="Form-inputs">
         <input
           {...register('email')}

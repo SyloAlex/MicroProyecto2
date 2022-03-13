@@ -16,6 +16,10 @@
     font-weight: bold;
     margin-bottom: 2rem;
 }
+.Form-container #Form-p {
+    font-size: 1.3rem;
+    margin-top: 1rem;
+}
 .Form-container .Form-inputs {
     margin: 2rem 0;
     margin-bottom: 1rem;
